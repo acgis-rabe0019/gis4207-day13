@@ -82,6 +82,7 @@ namespace MyProGisBLLTests
             flayer.Name = "Some feature layer";
             flayer.FeatureClass = @"C:\data\prov.shp";
         }
+
         private void InterfaceDemo3()
         {
             IMapDocument mapdoc = new MapDocument();
