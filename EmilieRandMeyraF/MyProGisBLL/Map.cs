@@ -56,5 +56,13 @@ namespace MyGisBLL
             
             _layerCount--;
         }
+
+        ILayer IMap.GetLayer(string layerName)
+        {
+            if (layerDict[layerName] != null)
+                return layerDict[layerName];
+            else
+                return null;
+        }
     }
 }
