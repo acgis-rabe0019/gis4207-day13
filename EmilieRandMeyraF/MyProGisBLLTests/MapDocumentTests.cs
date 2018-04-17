@@ -82,13 +82,13 @@ namespace MyProGisBLLTests
             flayer.Name = "Some feature layer";
             flayer.FeatureClass = @"C:\data\prov.shp";
         }
+        private void InterfaceDemo3()
+        {
+            IMapDocument mapdoc = new MapDocument();
+            IMap map = (IMap)mapdoc;
+            map.Name = "Bob";
+        }
 
-        //private void InterfaceDemo3()
-        //{
-        //    IMapDocument mapdoc = new MapDocument();
-        //    IMap map = (IMap)mapdoc;
-        //    map.Name = "Bob";
-        //}
         private ILayer GetLayer(string layerName)
         {
             IMap map = new Map();
@@ -97,5 +97,7 @@ namespace MyProGisBLLTests
             return layer;
             
         }
+
+
     }
 }
