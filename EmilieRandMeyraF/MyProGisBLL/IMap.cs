@@ -13,5 +13,6 @@ namespace MyGisBLL
         void AddLayer(ILayer layer);
         void RemoveLayer(int index);
         int LayerCount { get; }
+        ILayer GetLayer(string layerName);
     }
 }

@@ -8,11 +8,9 @@ namespace MyGisBLL
     public class Map: IMap
     {
         private string _name = string.Empty;
-        List<ILayer>_layers = new List<ILayer>();
-        Dictionary<string, ILayer> layerDict = new Dictionary<string, ILayer>();
-
+        private List<ILayer>_layers = new List<ILayer>();
+        private Dictionary<string, ILayer> layerDict = new Dictionary<string, ILayer>();
         private int _layerCount = 0;
-        
 
         string IMap.Name
         {
@@ -35,7 +33,7 @@ namespace MyGisBLL
         {
             get
             {
-                return _layerCount;
+                return _layers.Count;
             }
         }
 
@@ -43,6 +41,7 @@ namespace MyGisBLL
         {
 
             _layers.Add(layer);
+            layerDict.Add(layer.Name, layer);
         }
 
         void IMap.RemoveLayer(int index)
